@@ -1,0 +1,38 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block top1 %}
+{% endblock top1 %}
+
+{% block top2 %}
+    {% trans 'Change personal data' %}
+{% endblock top2 %}
+
+{% block for_users %}
+
+    {#    for rendering red text for errors, while error tags are <li> #}
+    <style>
+    li {color: #e83e8c;}
+    </style>
+
+    <form action="#" method="post">
+        {% csrf_token %}
+
+        {% for field in form %}
+        <div class="fieldWrapper form-group">
+            {{ field.errors }}
+            {{ field.label_tag }} {{ field }}
+            {% if field.help_text %}
+            <p class="help" style="color: #16181b">{{ field.help_text|safe }}</p>
+            {% endif %}
+        </div>
+        {% endfor %}
+
+      <div class="form-group">
+        <input type="submit" value="Update" class="btn btn-primary py-3 px-5">
+      </div>
+    </form>
+
+
+{% endblock for_users %}

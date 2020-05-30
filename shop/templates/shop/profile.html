@@ -1,0 +1,17 @@
+{% extends 'layout/base.html' %}
+{% load i18n %}
+
+{% block top1 %}
+{% endblock top1 %}
+
+{% block top2 %}
+    {% trans 'Profile' %}
+{% endblock top2 %}
+
+{% block for_users %}
+
+  <div class="form-group">
+    <p>profile of user {{ user.username }}</p>
+  </div>
+
+{% endblock for_users %}
