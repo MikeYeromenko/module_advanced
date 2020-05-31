@@ -9,3 +9,11 @@
     {% trans 'Registrating new user' %}
 {% endblock top2 %}
 
+
+{% block button %}
+    {% with button_title="Create" %}
+        {{ block.super }}
+    {% endwith %}
+{% endblock button %}
+
+

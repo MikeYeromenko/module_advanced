@@ -31,14 +31,13 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'shop.apps.ShopConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'shop.apps.ShopConfig',
-    'bootstrap4',
 ]
 
 MIDDLEWARE = [
@@ -124,3 +123,4 @@ STATIC_URL = '/static/'
 
 AUTH_USER_MODEL = 'shop.AdvUser'
 
+DEFAULT_SUM_FOR_USER = 10000

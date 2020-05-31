@@ -30,7 +30,9 @@
         {% endfor %}
 
       <div class="form-group">
-        <input type="submit" value="Update" class="btn btn-primary py-3 px-5">
+          {% block button %}
+        <input type="submit" value="{{ button_title|default:"Update" }}" class="btn btn-primary py-3 px-5">
+          {% endblock button %}
       </div>
     </form>
 
